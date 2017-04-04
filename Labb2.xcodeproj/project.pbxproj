@@ -15,6 +15,7 @@
 		5B984ED91E50C5150012B261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B984ED71E50C5150012B261 /* LaunchScreen.storyboard */; };
 		5B984EE41E50C5150012B261 /* Labb2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B984EE31E50C5150012B261 /* Labb2Tests.m */; };
 		5B984EEF1E50C5150012B261 /* Labb2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B984EEE1E50C5150012B261 /* Labb2UITests.m */; };
+		5B984EFE1E50C5540012B261 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B984EFD1E50C5540012B261 /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5B984EEA1E50C5150012B261 /* Labb2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Labb2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B984EEE1E50C5150012B261 /* Labb2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Labb2UITests.m; sourceTree = "<group>"; };
 		5B984EF01E50C5150012B261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B984EFC1E50C5540012B261 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		5B984EFD1E50C5540012B261 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				5B984ED71E50C5150012B261 /* LaunchScreen.storyboard */,
 				5B984EDA1E50C5150012B261 /* Info.plist */,
 				5B984EC91E50C5150012B261 /* Supporting Files */,
+				5B984EFC1E50C5540012B261 /* Model.h */,
+				5B984EFD1E50C5540012B261 /* Model.m */,
 			);
 			path = Labb2;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				5B984ED11E50C5150012B261 /* ViewController.m in Sources */,
 				5B984ECE1E50C5150012B261 /* AppDelegate.m in Sources */,
 				5B984ECB1E50C5150012B261 /* main.m in Sources */,
+				5B984EFE1E50C5540012B261 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

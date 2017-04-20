@@ -30,6 +30,7 @@
                                     <color key="titleColor" red="0.076932345324265738" green="0.21270204249112168" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgP-pl-vNT"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAU-Sw-vkn"/>
                                 </connections>
                             </button>
@@ -42,6 +43,7 @@
                                     <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0m-qF-wn9"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AP5-OC-Tmh"/>
                                 </connections>
                             </button>
@@ -54,6 +56,7 @@
                                     <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6B3-jY-epy"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgZ-6G-AYC"/>
                                 </connections>
                             </button>
@@ -77,6 +80,7 @@
                                     <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gSi-vf-rSN"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3TW-wU-bJM"/>
                                 </connections>
                             </button>
@@ -89,6 +93,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="pressNextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rMa-Ig-qyy"/>
                                     <action selector="pressedNextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7U-w5-0b5"/>
                                 </connections>
                             </button>

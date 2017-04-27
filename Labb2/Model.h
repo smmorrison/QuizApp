@@ -11,8 +11,8 @@
 
 @interface Model : NSObject
 
-@property (nonatomic) int amountCorrectGuesses;
-@property (nonatomic) int amountIncorrectGuesses;
+@property (nonatomic) int correctGuesses;
+@property (nonatomic) int incorrectGuesses;
 @property (nonatomic) NSDictionary* currentQuestion;
 @property (nonatomic) BOOL isGameActive;
 

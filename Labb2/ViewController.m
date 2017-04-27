@@ -37,10 +37,9 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)displayQuestion {
+- (void)showQuestion {
     NSMutableArray *randomAnswers = [NSMutableArray arrayWithObjects:self.game.currentQuestion[@"Correct"], self.game.currentQuestion[@"Wrong1"], self.game.currentQuestion[@"Wrong2"], self.game.currentQuestion[@"Wrong3"], self.game.currentQuestion[@"Wrong4"], nil];
     
     
@@ -56,31 +55,31 @@
     self.nextQuestionBtn.hidden = YES;
 }
 
-- (void)disableAllAnswerButtons {
+- (void)hideAnswerButtons {
+    self.answerBtn1.hidden = YES;
+    self.answerBtn2.hidden = YES;
+    self.answerBtn3.hidden = YES;
+    self.answerBtn4.hidden = YES;
+}
+- (void)showAnswerButtons {
+    self.answerBtn1.hidden = NO;
+    self.answerBtn2.hidden = NO;
+    self.answerBtn3.hidden = NO;
+    self.answerBtn4.hidden = NO;
+}
+
+- (void)disableAnswerButtons {
     self.answerBtn1.enabled = NO;
     self.answerBtn2.enabled = NO;
     self.answerBtn3.enabled = NO;
     self.answerBtn4.enabled = NO;
 }
 
-- (void)enableAllAnswerButtons {
+- (void)enableAnswerButtons {
     self.answerBtn1.enabled = YES;
     self.answerBtn2.enabled = YES;
     self.answerBtn3.enabled = YES;
     self.answerBtn4.enabled = YES;
-}
-
-- (void)hideAllAnswerButtons {
-    self.answerBtn1.hidden = YES;
-    self.answerBtn2.hidden = YES;
-    self.answerBtn3.hidden = YES;
-    self.answerBtn4.hidden = YES;
-}
-- (void)showAllAnswerButtons {
-    self.answerBtn1.hidden = NO;
-    self.answerBtn2.hidden = NO;
-    self.answerBtn3.hidden = NO;
-    self.answerBtn4.hidden = NO;
 }
 
 - (void)hideResultText {
@@ -88,53 +87,52 @@
     self.incorrectAnswersText.hidden = YES;
 }
 
-
-- (IBAction)pressAnswerButton:(id)sender {
+- (IBAction)pressedAnswerButton:(id)sender {
     UIButton *pressedBtn = (UIButton *)sender;
     self.roundResultText.hidden = NO;
     if ([self.game isAnswerCorrect:pressedBtn.titleLabel.text]) {
         self.roundResultText.textColor = [UIColor greenColor];
-        self.roundResultText.text = @"Rätt!";
+        self.roundResultText.text = @"Rätt svar!";
     } else {
         self.roundResultText.textColor = [UIColor redColor];
-        self.roundResultText.text = @"Fel!";
+        self.roundResultText.text = @"Fel svar!";
     }
-    [self disableAllAnswerButtons];
+    [self disableAnswerButtons];
     self.nextQuestionBtn.hidden = NO;
 }
 
-- (IBAction)pressNextQuestionButton:(id)sender {
+- (IBAction)pressedNextQuestionButton:(id)sender {
     self.roundResultText.hidden = YES;
     if ([[self.nextQuestionBtn currentTitle] isEqualToString:@"Nästa fråga"] || [[self.nextQuestionBtn currentTitle] isEqualToString:@"Visa resultat"]) {
         if (self.game.isGameActive) {
             if ([self.game isLastQuestion]) {
                 [self.nextQuestionBtn setTitle:@"Visa resultat" forState:UIControlStateNormal];
             }
-            [self displayQuestion];
-            [self enableAllAnswerButtons];
+            [self showQuestion];
+            [self enableAnswerButtons];
         } else {
-            [self hideAllAnswerButtons];
+            [self hideAnswerButtons];
             [self setUpAndShowResultText];
             [self.nextQuestionBtn setTitle:@"Spela igen" forState:UIControlStateNormal];
         }
     } else {
         [self hideResultText];
         [self startNewGame];
-        [self displayQuestion];
-        [self enableAllAnswerButtons];
-        [self showAllAnswerButtons];
+        [self showQuestion];
+        [self enableAnswerButtons];
+        [self showAnswerButtons];
     }
 }
 
 - (void)startNewGame {
     self.game = [[Model alloc]init];
     [self.nextQuestionBtn setTitle:@"Nästa fråga" forState:UIControlStateNormal];
-    [self displayQuestion];
+    [self showQuestion];
 }
 
 - (void)setUpAndShowResultText {
-    self.correctAnswersText.text = [NSString stringWithFormat:@"Antal rätt  %d", self.game.amountCorrectGuesses];
-    self.incorrectAnswersText.text = [NSString stringWithFormat:@"Antal fel  %d", self.game.amountIncorrectGuesses];
+    self.correctAnswersText.text = [NSString stringWithFormat:@"Antal rätt:  %d", self.game.correctGuesses];
+    self.incorrectAnswersText.text = [NSString stringWithFormat:@"Antal fel:  %d", self.game.incorrectGuesses];
     self.questionText.text = @"Resultat";
     self.correctAnswersText.hidden = NO;
     self.incorrectAnswersText.hidden = NO;

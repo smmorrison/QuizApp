@@ -10,8 +10,8 @@
 
 @interface Model ()
 
-@property (nonatomic) int amountRoundsPlayed;
-@property (nonatomic) int amountRoundsLeft;
+@property (nonatomic) int roundsPlayed;
+@property (nonatomic) int roundsLeft;
 @property (nonatomic) NSMutableArray* allQuestions;
 @property (nonatomic) NSMutableArray* questions;
 @end
@@ -22,19 +22,19 @@
     self = [super init];
     if (self) {
         self.isGameActive = YES;
-        self.amountCorrectGuesses = 0;
-        self.amountRoundsPlayed = 0;
-        self.amountRoundsLeft = 5;
+        self.correctGuesses = 0;
+        self.roundsPlayed = 0;
+        self.roundsLeft = 5;
         self.questions = [[NSMutableArray alloc] init];
-        [self setUpAllQuestions];
-        [self setUpRandomQuestions];
+        [self setUpQuestions];
+        [self randomQuestions];
         self.currentQuestion = self.questions[0];
     }
     return self;
 }
 
 
--(void)setUpAllQuestions {
+-(void)setUpQuestions {
     NSDictionary* q1 = @{@"Question":@"Vad heter huvudstaden i Nya Zeeland?",
                          @"Correct":@"Wellington",
                          @"Wrong1":@"Auckland",
@@ -55,12 +55,12 @@
                          @"Wrong1":@"16",
                          @"Wrong2":@"32",
                          @"Wrong3":@"10"};
-    NSDictionary* q5 = @{@"Question":@"Hur många landskap har Sverige? ",
+    NSDictionary* q5 = @{@"Question":@"Hur många landskap finns det i Sverige? ",
                          @"Correct":@"25",
                          @"Wrong1":@"28",
                          @"Wrong2":@"18",
                          @"Wrong3":@"22"};
-    NSDictionary* q6 = @{@"Question":@"Vad är landkoden till Sverige?",
+    NSDictionary* q6 = @{@"Question":@"Vad är landskoden till Sverige?",
                          @"Correct":@"46",
                          @"Wrong1":@"45",
                          @"Wrong2":@"44",
@@ -89,9 +89,9 @@
     self.allQuestions = [NSMutableArray arrayWithObjects: q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, nil];
 }
 
-- (void)setUpRandomQuestions {
+- (void)randomQuestions {
     
-    for (int i = 0; i < self.amountRoundsLeft; i++) {
+    for (int i = 0; i < self.roundsLeft; i++) {
         int random = arc4random() % self.allQuestions.count;
         NSDictionary *randomQuestion = self.allQuestions[random];
         self.questions[i] = randomQuestion;
@@ -102,19 +102,19 @@
 
 - (BOOL)isAnswerCorrect:(NSString*)answer {
     
-    self.amountRoundsLeft--;
-    self.amountRoundsPlayed++;
+    self.roundsLeft--;
+    self.roundsPlayed++;
     
-    if (self.amountRoundsLeft <= 0) {
+    if (self.roundsLeft <= 0) {
         self.isGameActive = NO;
     }
     
     if ([self.currentQuestion[@"Correct"] isEqualToString:answer]){
-        self.amountCorrectGuesses++;
+        self.correctGuesses++;
         [self changeCurrentQuestion];
         return true;
     } else {
-        self.amountIncorrectGuesses++;
+        self.incorrectGuesses++;
         [self changeCurrentQuestion];
         return false;
     }
@@ -122,12 +122,12 @@
 
 - (void)changeCurrentQuestion {
     if (self.isGameActive){
-        self.currentQuestion = self.questions[self.amountRoundsPlayed];
+        self.currentQuestion = self.questions[self.roundsPlayed];
     }
 }
 
 - (BOOL)isLastQuestion {
-    return (self.amountRoundsLeft == 1);
+    return (self.roundsLeft == 1);
 }
 
 @end

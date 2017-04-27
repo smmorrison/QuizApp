@@ -26,11 +26,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Svarsalternativ 1">
-                                    <color key="titleColor" red="0.076932345324265738" green="0.21270204249112168" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Svar 1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgP-pl-vNT"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAU-Sw-vkn"/>
                                 </connections>
                             </button>
@@ -39,11 +38,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Svarsalternativ 2">
-                                    <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Svar 2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0m-qF-wn9"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AP5-OC-Tmh"/>
                                 </connections>
                             </button>
@@ -52,15 +50,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Svarsalternativ 3">
-                                    <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Svar 3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6B3-jY-epy"/>
                                     <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgZ-6G-AYC"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fråga?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-Cr-fpd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu8-Nj-2of">
+                                <rect key="frame" x="16" y="374" width="288" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Svar 4">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3TW-wU-bJM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fråga" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-Cr-fpd">
                                 <rect key="frame" x="16" y="52" width="288" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -68,73 +77,59 @@
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu8-Nj-2of">
-                                <rect key="frame" x="16" y="374" width="288" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Svarsalternativ 4">
-                                    <color key="titleColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gSi-vf-rSN"/>
-                                    <action selector="pressedAnswerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3TW-wU-bJM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGE-di-U9G">
                                 <rect key="frame" x="16" y="504" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Nästa fråga">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressNextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rMa-Ig-qyy"/>
                                     <action selector="pressedNextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7U-w5-0b5"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Antal rätt 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iQW-qN-yMi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Antal rätt" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iQW-qN-yMi">
                                 <rect key="frame" x="48" y="252" width="225" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.98564441616148957" blue="0.0063155989119169087" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.11696655041499204" green="0.80210268497467041" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fel" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Snk-eW-QV6">
-                                <rect key="frame" x="48" y="280" width="225" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Antal fel 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C09-S8-ZTL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Antal fel" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C09-S8-ZTL">
                                 <rect key="frame" x="48" y="309" width="225" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.98441392183303833" blue="0.0034517450258135796" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.049691020333036739" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fel" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Snk-eW-QV6">
+                                <rect key="frame" x="48" y="278" width="225" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.076932345319999998" green="0.21270204249999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="answerBtn1" destination="ZVm-Ag-rG1" id="fiz-Yh-yL3"/>
-                        <outlet property="answerBtn2" destination="7iJ-FI-DbS" id="l4B-RE-N1H"/>
-                        <outlet property="answerBtn3" destination="tZH-Q2-Qyk" id="tXg-tK-Ywe"/>
-                        <outlet property="answerBtn4" destination="vu8-Nj-2of" id="auI-aB-khm"/>
+                        <outlet property="answerBtn1" destination="ZVm-Ag-rG1" id="pKX-bh-3xD"/>
+                        <outlet property="answerBtn2" destination="7iJ-FI-DbS" id="ixp-dn-J8D"/>
+                        <outlet property="answerBtn3" destination="tZH-Q2-Qyk" id="vio-w3-SDT"/>
+                        <outlet property="answerBtn4" destination="vu8-Nj-2of" id="zNs-N6-b0t"/>
                         <outlet property="bgView" destination="8bC-Xf-vdC" id="cEY-4q-tmH"/>
-                        <outlet property="correctAnswersText" destination="iQW-qN-yMi" id="JSY-Ou-SdU"/>
-                        <outlet property="incorrectAnswersText" destination="C09-S8-ZTL" id="EdX-oq-i0E"/>
-                        <outlet property="nextQuestionBtn" destination="sGE-di-U9G" id="cy6-Xc-Rsq"/>
+                        <outlet property="correctAnswersText" destination="iQW-qN-yMi" id="spK-H5-ZFq"/>
+                        <outlet property="incorrectAnswersText" destination="C09-S8-ZTL" id="y0r-Il-g46"/>
+                        <outlet property="nextQuestionBtn" destination="sGE-di-U9G" id="QKu-3c-dkf"/>
                         <outlet property="questionText" destination="EOl-Cr-fpd" id="O21-Nt-nJh"/>
-                        <outlet property="roundResultText" destination="Snk-eW-QV6" id="Irx-iw-5Xz"/>
+                        <outlet property="roundResultText" destination="Snk-eW-QV6" id="adu-U0-03c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
